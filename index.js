@@ -187,15 +187,8 @@ KBucket.prototype = {
   },
 
   // return all contacts as an array
-  all_contacts: function () {
-    var ret = []
-    for (var nodes = [this.root]; nodes.length > 0;) {
-      var node = nodes.pop()
-      if (node.contacts === null) nodes.push(node.right, node.left)
-      else ret = ret.concat(node.contacts)
-    }
-    return ret
-  },
+  all_contacts: function () { return this.root.all_contacts() },
+  toArray: function () { return this.root.all_contacts() },       // backward compatible
 
   to_obj: function () {
     return this.root.to_obj()
@@ -300,6 +293,17 @@ Node.prototype = {
         bit++
       }
     }
+  },
+
+  all_contacts: function () {
+    var ret = []
+    var nodes = [this]
+    while (nodes.length > 0) {
+      var node = nodes.pop()
+      if (node.contacts === null) nodes.push(node.right, node.left)
+      else ret = ret.concat(node.contacts)
+    }
+    return ret
   },
 
   // Converts the graph starting at the given node into condensed minimal object form with tiny names and values
