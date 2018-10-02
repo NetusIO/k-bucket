@@ -261,7 +261,7 @@ function Node () {
   this.left = null
   this.right = null
   this.far = false
-  this.dist = 0
+  this._dist = 0
 }
 
 Node.prototype = {
