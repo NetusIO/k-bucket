@@ -1,11 +1,12 @@
 {
-  "name": "k-bucket",
+  "name": "nio-k-bucket",
   "version": "1.0.0",
   "description": "Kademlia DHT K-bucket implementation as a binary tree",
   "keywords": [
     "k-bucket",
     "kademlia",
-    "dht"
+    "dht",
+    "netus"
   ],
   "bugs": {
     "url": "https://github.com/NetusIO/k-bucket/issues"
