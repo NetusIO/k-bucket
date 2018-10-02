@@ -49,7 +49,7 @@ and it's important to give them credit - I use their original tests to ensure ba
 
 ## Installation
 
-    npm install nio-k-bucket
+    npm install netus-k-bucket
 
 ## Tests
 
