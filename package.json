@@ -27,7 +27,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/NetusIO/k-bucket"
+    "url": "https://github.com/netus-io/k-bucket"
   },
   "scripts": {
     "benchmark:add": "node benchmarks/add.js",

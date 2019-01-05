@@ -56,6 +56,7 @@ function KBucket (opt) {
 KBucket.prototype = {
   constructor: KBucket,
 
+  // contact.id holds a BigEndian value.  traverse tree by bits (0: left, 1: right) unti non-null contacts is found.
   add: function (contact) {
     contact.id.length < 33 || err('ids cannot exceed 32 bytes')
 
